@@ -1,0 +1,247 @@
+body, html {
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden;
+    background-color: #182b3a;
+    background-image: linear-gradient(315deg, #182b3a 0%, #20a4f3 74%);
+
+ }
+
+ body, h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+ }
+
+ .flexboxHeader {
+    background-color: rgb(12, 12, 12);
+    display: flex;
+	justify-content: center;
+}
+
+.childCounter {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    height: 30px;
+}
+
+#flexCounter {
+    width: 100px;
+    font-size: 25px;
+    margin-right: 8px;
+    border-radius: 10px;
+}
+
+#flexCounterBtn {
+  appearance: button;
+  background-color: #a11220;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  display: inline-block;
+  font-family: din-round,sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: .8px;
+  line-height: 3px;
+  margin: 0;
+  outline: none;
+  overflow: visible;
+  padding: 13px 16px;
+  text-align: center;
+  text-transform: uppercase;
+  touch-action: manipulation;
+  transform: translateZ(0);
+  transition: filter .2s;
+  user-select: none;
+  -webkit-user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  
+}
+
+#flexCounterBtn:after {
+  background-clip: padding-box;
+  background-color: #ed2d40;
+  border: solid transparent;
+  border-radius: 16px;
+  border-width: 0 0 4px;
+  bottom: -4px;
+  content: "";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
+}
+
+#flexCounterBtn,
+#flexCounterBtn:focus {
+  user-select: auto;
+}
+
+#flexCounterBtn:hover:not(:disabled) {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+}
+
+#flexCounterBtn:disabled {
+  cursor: auto;
+}
+
+#flexCounterBtn:active {
+  border-width: 4px 0 0;
+  background: none;
+}
+.flexParent {
+    display: flex;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    height: 700px;
+    width: 700px;
+    background-color: white;
+    border: 10px black;
+    background-color: #D9AFD9;
+    background-image: linear-gradient(0deg, #D9AFD9 0%, #97D9E1 100%);
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.606);
+    border-radius: 6px;
+}
+#flexboxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    border: 10px black;
+}
+
+.flexChild {
+    display: flex;
+    margin: 10px 0;
+    background-color: #ed2d40;
+    border: 3px solid black;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.606);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-bottom: 40px;
+    height: 100px;
+    width: 100px;
+}
+
+/* FLEX-ABLE CONTROL PANEL */
+
+.flexGroup {
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    justify-content: space-between;
+    overflow: auto;
+}
+.flexAttribute {
+    width: 250px;
+    border-radius: 10px;
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-weight: bold;
+    justify-content: space-between;
+    background-color: #ed2d40;
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Times New Roman', serif;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.606);
+}
+
+
+
+.attributeFunction {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 1.75em;
+    padding-bottom: 1.75em;
+    margin-left: 5px;
+}
+/* Toggle Panel */
+.attributeFunction input[type="button"] {
+    width: 150px;
+    height: 50px; 
+    margin: 5px 0; 
+    background-color: rgb(194, 9, 200); 
+    border: 3px solid blue; 
+    cursor: pointer; 
+    color: white;
+}
+.toggle {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.toggle input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.toggle .onOff {
+    color: white;
+    text-shadow: 0 0 3px black;
+    font-weight: bold;
+    margin-right: 10px;
+    font-weight: bolder;
+    font-size: 20px;
+    
+}
+
+.slider {
+    position: relative;
+    display: block;
+    cursor: pointer;
+    background-color: rgb(11, 8, 8);
+    transition: 0.4x;
+    width: 80px;
+    height: 40px;
+    box-shadow: 5px 2px 5px hsla(0, 0%, 0%, 0.606);
+}
+
+.slider:before {
+    content: "";
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    background-color: rgb(255, 255, 255);
+    transition: 0.4x;
+    top: 10px;
+    left: 10px;
+}
+
+input:checked + .slider {
+    background-color: green;
+    box-shadow: 0 0 12px green;
+}
+
+input:checked + .slider:before {
+    transform: translateX(40px);
+}
+
+.slider.round {
+    border-radius: 10px;
+}
+
+.slider:before {
+    border-radius: 10px;
+}
+
+

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FlexAble</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <div class="flexboxHeader">
+        <img src="images/logo.png" alt="website logo" class="flexImage" style="height: 100px; width: 300px">
+    </div>
+
+<div class="childCounter">
+    <input id="flexCounter" type="number" min="1" max="10">
+    <button id="flexCounterBtn">Create Flex</button>
+</div>
+<div class="flexParent">
+    <div id="flexboxContainer"></div>
+</div>
+    <div class="flexGroup">
+        <div class="flexAttribute flexDirection">
+            <div class="attributeHeading">FLEX-DIRECTION</div>
+            <div class="attributeExplanation"></div>
+            <div class="attributeFunction">
+                <label class="toggle">
+                    <span class="onOff">row</span>
+                    <input type="checkbox"  id="fDirection-1" class="fDirection" onclick="updateFlexDirection(this)"checked/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">row-reverse</span>
+                    <input type="checkbox" id="fDirection-2" class="fDirection" onclick="updateFlexDirection(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">column</span>
+                    <input type="checkbox" id="fDirection-3" class="fDirection" onclick="updateFlexDirection(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">column-reverse</span>
+                    <input type="checkbox" id="fDirection-4" class="fDirection" onclick="updateFlexDirection(this)"/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="flexAttribute flexWrap">
+                <div class="attributeHeading">FLEX-WRAP</div>
+                <div class="attributeExplanation"></div>
+                <div class="attributeFunction">
+                    <label class="toggle">
+                        <span class="onOff">nowrap</span>
+                        <input type="checkbox" id="fWrap-1" class="fWrap" onclick="updateFlexWrap(this)" checked/>
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="toggle">
+                        <span class="onOff">wrap</span>
+                        <input type="checkbox" id="fWrap-2" class="fWrap" onclick="updateFlexWrap(this)"/>
+                        <span class="slider round"></span>
+                    </label>
+                    <label class="toggle">
+                        <span class="onOff">wrap-reverse</span>
+                        <input type="checkbox" id="fWrap-3" class="fWrap" onclick="updateFlexWrap(this)"/>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+        </div>
+        
+        <div class="flexAttribute justifyContent">
+            <div class="attributeHeading">JUSTIFY-CONTENT</div>
+            <div class="attributeExplanation"></div>
+            <div class="attributeFunction">
+                <label class="toggle">
+                    <span class="onOff">flex-start</span>
+                    <input type="checkbox" id="jContent-1"  class="jContent" onclick="updateJustifyContent(this)" checked/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">flex-end</span>
+                    <input type="checkbox" id="jContent-2" class="jContent" onclick="updateJustifyContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-around</span>
+                    <input type="checkbox" id="jContent-3 "class="jContent" onclick="updateJustifyContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-evenly</span>
+                    <input type="checkbox" id="jContent-4" class="jContent" onclick="updateJustifyContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-between</span>
+                    <input type="checkbox" id="jContent-5" class="jContent" onclick="updateJustifyContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="flexAttribute alignItems">
+            <div class="attributeHeading">ALIGN-ITEMS</div>
+            <div class="attributeExplanation"></div>
+            <div class="attributeFunction">
+                <label class="toggle">
+                    <span class="onOff">stretch</span>
+                    <input type="checkbox" id="aItems-1" class="aItems" onclick="updateAlignItems(this)"checked/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">baseline</span>
+                    <input type="checkbox" id="aItems-2" class="aItems" onclick="updateAlignItems(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">center</span>
+                    <input type="checkbox" id="aItems-3" class="aItems" onclick="updateAlignItems(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">flex-start</span>
+                    <input type="checkbox" id="aItems-4" class="aItems" onclick="updateAlignItems(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">flex-end</span>
+                    <input type="checkbox" id="aItems-5" class="aItems" onclick="updateAlignItems(this)"/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="flexAttribute alignContent">
+            <div class="attributeHeading">ALIGN-CONTENT</div>
+            <div class="attributeExplanation"></div>
+            <div class="attributeFunction">
+                <label class="toggle">
+                    <span class="onOff">stretch</span>
+                    <input type="checkbox" id="aContent-1" class="aContent" onclick="updateAlignContent(this)"checked/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">center</span>
+                    <input type="checkbox" id="aContent-2" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">flex-start</span>
+                    <input type="checkbox" id="aContent-3" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">flex-end</span>
+                    <input type="checkbox" id="aContent-4" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-around</span>
+                    <input type="checkbox" id="aContent-5" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-evenly</span>
+                    <input type="checkbox" id="aContent-6" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+                <label class="toggle">
+                    <span class="onOff">space-between</span>
+                    <input type="checkbox" id="aContent-7" class="aContent" onclick="updateAlignContent(this)"/>
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
